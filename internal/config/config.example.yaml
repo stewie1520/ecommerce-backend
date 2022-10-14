@@ -1,0 +1,21 @@
+development: &development
+  recaptcha_secret_key: "<YOUR CAPTCHA SECRET KEY>"
+  smtp:
+    server_host: "<YOUR SMTP SERVER HOST>"
+    port: <YOUR SMTP SERVER PORT>
+    user_name: "<YOUR SMTP USER NAME>"
+    password: "<YOUR SMTP PASSWORD>"
+  redis:
+    host: "<YOUR REDIS HOST>"
+    port: <YOUR REDIS PORT>
+  s3:
+    access_key: "<YOUR S3 ACCESS KEY>"
+    secret: "<YOUR S3 SECRET>"
+    bucket: "<YOUR S3 BUCKET>"
+    region: "<YOUR S3 REGION>"
+    endpoint: "<YOUR S3 ENDPOINT>"
+staging:
+  <<: *development
+  redis:
+    host: "<YOUR REDIS HOST>"
+    port: <YOUR REDIS PORT>
